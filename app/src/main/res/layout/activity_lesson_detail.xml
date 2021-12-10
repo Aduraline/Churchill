@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lessonviewmodel"
+            type="africa.of.designers.churchill.ui.lessondetail.LessonDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".LessonDetailActivity">
+
+        <ImageView
+            android:id="@+id/lesson_cover_img"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/lesson_cover_img"
+            app:layout_constraintEnd_toEndOf="@+id/lesson_cover_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lesson_cover_img"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/play_fab"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_bg"
+            android:clickable="true"
+            android:fontFamily="@font/muli_semibold"
+            android:padding="7dp"
+            android:text="@string/enroll_now"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.512"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/lesson_img"
+            android:layout_width="125dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:transitionName="sharedName"
+            app:layout_constraintBottom_toBottomOf="@+id/lesson_cover_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_cover_img"
+            app:srcCompat="@drawable/gradient_bg"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/lesson_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/muli_semibold"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lesson_img"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_cover_img" />
+
+        <TextView
+            android:id="@+id/lesson_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/muli_semibold"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/simple_text"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_img" />
+
+        <ListView
+            android:id="@+id/type_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="7dp"
+            android:fontFamily="@font/muli_semibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

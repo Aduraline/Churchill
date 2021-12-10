@@ -1,41 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#a11629</color>
-    <color name="somethingPrimary">#f75a21</color>
-    <color name="colorPrimaryDark">#f2354f</color>
-    <color name="colorAccent">#f1b814</color>
-    <color name="colorPrimaryMain">#151c25</color>
-    <color name="colorPrimaryDarkMain">#151c25</color>
-    <color name="text_light_blue">#566f9a</color>
+    <color name="colorPrimary">#f1b814</color>
+    <color name="colorPrimaryDark">#DCA70F</color>
+
+    <color name="colorAccent">#151c25</color>
+
+    <color name="black">#000000</color>
+    <color name="black90">#151c25</color>
     <color name="white">#ffffff</color>
-    <color name="selTextBgColor">#F06292</color>
-
-
+    <color name="white_95">#4AFFFFFF</color>
     <color name="gray">#aa808080</color>
+    <color name="green">#32C25E</color>
+    <color name="darkRed">#a11629</color>
 
-    <color name="windowBackground">#F3F3F3</color>
-
-    <color name="card_text_color">#FFFFFF</color>
-    <color name="card_label_color">#D4D9DC</color>
-    <color name="card_cvv_color">#383838</color>
-    <color name="CTA_text">#FFFFFF</color>
-    <color name="CTA_bg">#32C25E</color>
-
-    <array name="array_dot_active">
-        <item>@color/colorPrimaryMain</item>
-        <item>@color/colorPrimaryMain</item>
-        <item>@color/colorPrimaryMain</item>
-        <item>@color/colorPrimaryMain</item>
-        <item>@color/colorPrimaryMain</item>
-        <item>@color/colorPrimaryMain</item>
-    </array>
-
-    <array name="array_dot_inactive">
-        <item>@color/white</item>
-        <item>@color/white</item>
-        <item>@color/white</item>
-        <item>@color/white</item>
-        <item>@color/white</item>
-        <item>@color/white</item>
-    </array>
+    <color name="background">#f1b814</color>
 </resources>

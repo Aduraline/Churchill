@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="registerviewmodel"
+            type="africa.of.designers.churchill.ui.register.RegisterViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:paddingTop="90dp"
+            android:paddingBottom="90dp"
+            tools:context=".ui.auth.AuthActivity">
+
+            <TextView
+                android:id="@+id/auth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_semibold"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:text="@string/welcome_to"
+                android:textColor="@color/black90"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_title">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:paddingStart="19dp"
+                    android:paddingEnd="2dp"
+                    android:text="@string/chinese"
+                    android:textColor="@color/black90"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="19dp"
+                    android:text="@string/panda"
+                    android:textColor="@color/black90"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="@string/username"
+                    android:textColor="@color/black90" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittextround"
+                    android:fontFamily="@font/muli_semibold"
+                    android:hint="@string/enter_here"
+                    android:inputType="text"
+                    android:maxLength="21"
+                    android:paddingStart="17dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="17dp"
+                    android:paddingRight="10dp"
+                    android:text="@={registerviewmodel.username}"
+                    android:textColor="@color/black90"
+                    android:textColorHint="@color/gray"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="@string/email"
+                    android:textColor="@color/black90" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittextround"
+                    android:fontFamily="@font/muli_semibold"
+                    android:hint="@string/enter_here"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="17dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="17dp"
+                    android:paddingRight="10dp"
+                    android:text="@={registerviewmodel.email}"
+                    android:textColor="@color/black90"
+                    android:textColorHint="@color/gray"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="@string/password"
+                    android:textColor="@color/black90" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColorHint="@color/gray"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:hintEnabled="false"
+                        app:passwordToggleDrawable="@drawable/password_toggle_drawable"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/black90">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittextround"
+                            android:fontFamily="@font/muli_semibold"
+                            android:hint="@string/enter_here"
+                            android:inputType="textPassword"
+                            android:paddingStart="17dp"
+                            android:paddingEnd="17dp"
+                            android:text="@={registerviewmodel.password}"
+                            android:textColor="@color/black90"
+                            android:textColorHint="@color/gray"
+                            android:textSize="13sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:layout_editor_absoluteX="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/onesideround"
+                    android:fontFamily="@font/muli_semibold"
+                    android:onClick="@{registerviewmodel::onAuthenticateUser}"
+                    android:stateListAnimator="@null"
+                    android:text="@string/register_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/muli_semibold"
+                    android:onClick="@{registerviewmodel::onGotoLogin}"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/black90" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
